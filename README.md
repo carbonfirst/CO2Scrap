@@ -7,8 +7,9 @@ A handy Python script to collect carbon intensity and fossil fuel usage from ele
 
 * It handles errors that may happen when querying co2signal.com, so only validated values are stored
 * It can also use multiple co2signal keys for multiplexing regions querying and avoid request limiting errors.
- * Edit tokens.json to use such feature
-* In-Sleep feature to wait a user-provided amount of seconds between requests to avoid saturating co2signal.com servers
+ - Edit ```tokens.json``` to use this feature
+* Sleep feature to wait for a user-provided amount of seconds between requests
+ - This avoids saturating co2signal.com servers and having yourself blocked from querying
  
  ## Requirements
  
