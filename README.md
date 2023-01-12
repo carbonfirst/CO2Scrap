@@ -37,3 +37,4 @@ This way, regional information are read from the ```cloud_regions.full.json``` f
 - [ ] Support (lattitude, longitude) directly in JSON
 - [ ] Support other providers, e.g., [WattTime](https://www.watttime.org/api-documentation)
 - [ ] Improve documentation
+- [ ] Implement a notification feature that calls user-specified external script(s) every time new energy values are successufully retrieved 
