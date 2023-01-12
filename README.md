@@ -18,7 +18,7 @@ A handy Python script to collect carbon intensity and fossil fuel usage from ele
 
 Visit https://co2signal.com and sign up to acquire their API keys. We suggest acquiring a couple of keys in order to avoid request limiting errors (currently set at 30 requests per-hour).
 
-Then, edit the file tokens.json with the email address and API-key you have received.
+Then, edit the file ```tokens.json``` with the email address and API-key you have received.
 
 * To see all available options:
    ```
