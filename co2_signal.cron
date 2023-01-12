@@ -1,1 +1,1 @@
-0,30 * * * * python3 /nfs/obelix/raid/co2signal.com/co2_signal.py --regions-file /nfs/obelix/raid/co2signal.com/cloud_regions.full.json --output_dir /nfs/obelix/raid/co2signal.com/zones/ >> /nfs/obelix/raid/co2signal.com/co2_signal.log 2>&1
+0,30 * * * * python3 co2signal.com/co2_signal.py --regions-file co2signal.com/cloud_regions.full.json --output_dir co2signal.com/zones/ >> co2signal.com/co2_signal.log 2>&1
