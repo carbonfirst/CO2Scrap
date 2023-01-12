@@ -2,12 +2,13 @@
 A handy Python script to collect carbon intensity and fossil fuel usage from electricityMap through co2signal.com.
 
 ## Features
-* The script supports country and region-specific, and (latitude, longitude) scrapping from co2signal.com
+* The script supports country, region-specific, and (latitude, longitude) scrapping from co2signal.com
  * If using multiple-regions, only region/country-specific support is implemented. See TODO.
 
-* It handles errors that may happen when querying co2signal.com 
-* It can also use multiple co2signal keys for multiplexing multiple regions to avoid request limiting errors.
- * See tokens.json
+* It handles errors that may happen when querying co2signal.com, so only validated values are stored
+* It can also use multiple co2signal keys for multiplexing regions querying and avoid request limiting errors.
+ * Edit tokens.json to use such feature
+* In-Sleep feature to wait a user-provided amount of seconds between requests to avoid saturating co2signal.com servers
  
  ## Requirements
  
