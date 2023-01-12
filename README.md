@@ -31,6 +31,8 @@ API and script error logs are output in the terminal and can be redirected direc
 
 ```python3 co2_signal.py --regions-file cloud_regions.full.json --output_dir zones/ >> co2_signal.log 2>&1```
 
+This way, regional information are read from the ```cloud_regions.full.json``` file, the energy values are stored in the ```zones/``` directory, and the error logs are stored in the ```co2_signal.log``` file.
+
 ## TODO
 - [ ] Support (lattitude, longitude) directly in JSON
 - [ ] Support other providers, e.g., WattTime
