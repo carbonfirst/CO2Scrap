@@ -26,6 +26,8 @@ Then, edit the file ```tokens.json``` with the email address and API-key you hav
    python3 co2_signal.py --help
    ```
 
+API and script error logs are stored in ```co2_signal.log```.
+
 ## TODO
 * Support (lattitude, longitude) directly in JSON
 * Support other providers, e.g., WattTime
