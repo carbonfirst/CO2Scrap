@@ -122,8 +122,14 @@ def save_zone_co2_intensity(zone, zone_csv_row, output_dir, dc=False):
     except Exception as e:
         logger.error("Error while opening and writing to csv file: {}".format(e))    
 
-def exec_zones(output_dir):
+def exec_zones(output_dir, sleep=5.0):
+    first_zone = True
     for zone in zones:
+        if first_zone == True:
+            first_zone = False
+        else:
+            logger.info('Sleeping for {}s before issuing request'.format(sleep))
+            time.sleep(sleep)
         logger.info('Requesting CO2 information from Zone {}'.format(zone))
         token, co2_zone_req = get_latest_perCountry(zone)
         if 'status' in co2_zone_req:
@@ -147,7 +153,9 @@ def exec_zones(output_dir):
                 logger.warning("Non-ok request status for token {}: {}".format(token, co2_zone_req))
                 # check if zone has 'carbonIntensity' item and handle error
         else:
-            req_out = co2_zone_req['message']
+            req_out = "No message received"
+            if 'message' in co2_zone_req:
+                req_out = co2_zone_req['message']
             logger.warning("API error in zone {}: {}".format(zone, req_out))
             logger.warning("Token: {}".format(token))
             #break
@@ -179,7 +187,7 @@ def parse_tokens(tokens_file):
 def serve():
     parser = argparse.ArgumentParser(__name__)
     parser.add_argument("--auth-tokens", dest="auth_tokens", type=str, default='tokens.json', help="File with list of Authorization tokens (from co2signal.com) per-line")
-    parser.add_argument("--regions-file", dest="regions", default="cloud_regions.json", type=str,
+    parser.add_argument("--regions-file", dest="regions", default="/nfs/obelix/raid/co2signal.com/cloud_regions.json", type=str,
                         help="Input JSON file with Cloud Regions to collect Carbon Intensity from")
     parser.add_argument('--output_dir', required='--regions-file' in sys.argv, #only required if --regions-file is given
                         help="Directory to store Carbon Intensity for each Cloud Region")
@@ -190,7 +198,7 @@ def serve():
                         help="Geographical Latitude")
     parser.add_argument("--api_url", dest="api_url", type=str, default="https://api.co2signal.com/v1/latest",
                         help="co2signal.com/electricityMap API url if the default has been changed")
-    parser.add_argument("--sleep", dest="sleep", type=float, default=900, help="Sleep time in seconds between API requests")
+    parser.add_argument("--sleep", dest="sleep", type=float, default=3.0, help="Sleep time in seconds between API requests")
 
     args = parser.parse_args()
     build_parser(args)
@@ -216,7 +224,7 @@ def build_parser(args):
         parse_regions(args.regions)
         output_dir = os.path.abspath(args.output_dir)
         if os.path.exists(output_dir):
-            exec_zones(args.output_dir)
+            exec_zones(args.output_dir, args.sleep)
         else:
             logger.error("Directory {} does not exist.".format(output_dir))
 
