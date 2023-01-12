@@ -26,7 +26,9 @@ Then, edit the file ```tokens.json``` with the email address and API-key you hav
    python3 co2_signal.py --help
    ```
 
-API and script error logs are output in the terminal and can be redirected (use ```>>``` bash/zsh command when executing ```co2_signal.py```) directly to a file for further analysis.
+API and script error logs are output in the terminal and can be redirected directly to a file for further analysis. Use ```>>``` bash/zsh command when executing ```co2_signal.py```, e.g.,
+
+```python3 co2_signal.py --regions-file cloud_regions.full.json --output_dir zones/ >> co2_signal.log 2>&1```
 
 ## TODO
 * Support (lattitude, longitude) directly in JSON
