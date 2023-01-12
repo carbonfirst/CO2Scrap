@@ -14,7 +14,7 @@ A handy Python script to collect carbon intensity and fossil fuel usage from ele
  ## Requirements
  
  * Python3
- * requests packages (use pip to install it)
+ * [requests](https://pypi.org/project/requests/) package (use pip to install it)
  
 ## Usage
 
