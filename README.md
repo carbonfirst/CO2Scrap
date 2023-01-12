@@ -20,7 +20,8 @@ Visit https://co2signal.com and sign up to acquire their API keys. We suggest ac
 
 Then, edit the file tokens.json with the email address and API-key you have received.
 
-* Use python3 co2_signal.py --help to see all available options.
+* To see all available options:
+   python3 co2_signal.py --help
 
 ## TODO
 * Support (lattitude, longitude) directly in JSON
