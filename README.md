@@ -32,5 +32,5 @@ API and script error logs are output in the terminal and can be redirected direc
 ```python3 co2_signal.py --regions-file cloud_regions.full.json --output_dir zones/ >> co2_signal.log 2>&1```
 
 ## TODO
-- [] Support (lattitude, longitude) directly in JSON
-- [] Support other providers, e.g., WattTime
+- [ ] Support (lattitude, longitude) directly in JSON
+- [ ] Support other providers, e.g., WattTime
