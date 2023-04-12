@@ -1,1 +1,1 @@
-0,30 * * * * python3 co2signal.com/co2_signal.py --regions-file co2signal.com/cloud_regions.full.json --output_dir co2signal.com/zones/ >> co2signal.com/co2_signal.log 2>&1
+0,30 * * * * python3 co2signal_api/co2_signal.py --regions-file co2signal_api/cloud_regions.full.json --output_dir co2signal_api/zones/ >> co2signal_api/co2_signal.log 2>&1
