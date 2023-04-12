@@ -1,5 +1,5 @@
-# co2signal_api
-A handy Python script to collect carbon intensity and fossil fuel usage from electricityMap through co2signal.com.
+# CO2Scrap
+CO2Scrap is a handy Python script to collect carbon intensity and fossil fuel usage from electricityMap through co2signal.com.
 
 ## Features
 * The script supports country, region-specific, and (latitude, longitude) scrapping from co2signal.com
@@ -24,14 +24,14 @@ Then, edit the file ```tokens.json``` with the email address and API-key you hav
 
 * To see all available options:
    ```
-   python3 co2_signal.py --help
+   python3 co2scrap.py --help
    ```
 
-API and script error logs are output in the terminal and can be redirected directly to a file for further analysis. Use ```>>``` bash/zsh command when executing ```co2_signal.py```, e.g.,
+API and script error logs are output in the terminal and can be redirected directly to a file for further analysis. Use ```>>``` bash/zsh command when executing ```co2scrap.py```, e.g.,
 
-```python3 co2_signal.py --regions-file cloud_regions.full.json --output_dir zones/ >> co2_signal.log 2>&1```
+```python3 co2scrap.py --regions-file cloud_regions.full.json --output_dir zones/ >> co2scrap.log 2>&1```
 
-This way, regional information are read from the ```cloud_regions.full.json``` file, the energy values are stored in the ```zones/``` directory, and the error logs are stored in the ```co2_signal.log``` file.
+This way, regional information are read from the ```cloud_regions.full.json``` file, the energy values are stored in the ```zones/``` directory, and the error logs are stored in the ```co2scrap.log``` file.
 
 ## TODO
 - [ ] Support (lattitude, longitude) directly in JSON
