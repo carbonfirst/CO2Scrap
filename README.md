@@ -1,19 +1,18 @@
 # CO2Scrap
-CO2Scrap is a handy Python script to collect carbon intensity and fossil fuel usage from electricityMap through co2signal.com.
+CO2Scrap is a handy Python script to collect carbon intensity and fossil fuel usage. Currently, it only supports scrapping data from electricityMap through co2signal.com free API.
 
 ## Features
 * The script supports country, region-specific, and (latitude, longitude) scrapping from co2signal.com
   * If using multiple-regions, only region/country-specific support is implemented. See TODO.
-* Local's and Region's time are store, so the user can understand the differences across regions and time
-* It handles errors that may happen when querying co2signal.com, so only validated values are stored
+* Local's and Region's time are store, so the user can understand the differences across locations and time
+* It handles errors that may happen when querying co2signal.com, so only validated data values are stored
 * It can also use multiple co2signal keys for multiplexing regions querying and avoid request limiting errors.
   -  Edit ```tokens.json``` to use this feature
 * Sleep feature to wait for a user-provided amount of seconds between requests
-  -  This avoids saturating co2signal.com servers and having yourself blocked from querying
+  -  This avoids saturating co2signal.com servers and having yourself blocked from querying (in case you do not own multiple API tokens)
  
  ## Requirements
  
- * Python3
  * [requests](https://pypi.org/project/requests/) package (use pip to install it)
  
 ## Usage
