@@ -61,6 +61,31 @@ This way, regional information are read from the ```regions.json``` file, the re
 * To see all available options:
    ```bash
    python3 co2scrap.py --help
+   
+   usage: co2scrap [-h] [--auth-tokens AUTH_TOKENS] [--regions-file REGIONS]
+                [--output_dir OUTPUT_DIR]
+                [--country-zone COUNTRY [COUNTRY ...]] [--lon LONGITUDE]
+                [--lat LATITUDE] [--api_url API_URL] [--sleep SLEEP]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --auth-tokens AUTH_TOKENS
+                        File with list of Authorization tokens (from
+                        co2signal.com), one token per-line
+  --regions-file REGIONS
+                        Input JSON file with set of Regions and their country
+                        zone codes to collect Carbon Intensity from
+  --output_dir OUTPUT_DIR
+                        Directory to store Carbon Intensity collected for each
+                        Region (in --regions-file)
+  --country-zone COUNTRY [COUNTRY ...]
+                        Country Zone Name. Do not use it with --regions-file.
+  --lon LONGITUDE       Geographical Longitude
+  --lat LATITUDE        Geographical Latitude
+  --api_url API_URL     co2signal.com API URL (in case the default URL has
+                        been changed)
+  --sleep SLEEP         Sleep time (in seconds) between multiple API request
+                        calls
    ```
 
 ## Notes
