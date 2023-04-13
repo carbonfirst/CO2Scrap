@@ -17,9 +17,17 @@ CO2Scrap is a handy Python script to collect and output carbon intensity and fos
  
 ## Usage
 
-Visit https://co2signal.com and sign up to acquire their API keys. We suggest acquiring a couple of keys in order to avoid request limiting errors (currently set at 30 requests per-hour).
+Visit https://co2signal.com, and sign up to acquire an API key.
+Then, edit file ```tokens.json```, and include with the email address and API-key you have received. E.g.:
 
-Then, edit the file ```tokens.json``` with the email address and API-key you have received.
+[
+        {
+                "user": "username@email.com",
+                "token": "Include-Your-Own-Token"
+        }
+]
+
+The script will automatically read ```tokens.json``` to authenticate you with co2signal.com. Multiple tokens can be included in ```tokens.json```.
 
 * To see all available options:
    ```
@@ -31,6 +39,10 @@ API and script error logs are output in the terminal and can be redirected direc
 ```python3 co2scrap.py --regions-file regions.json --output_dir zones/ >> co2scrap.log 2>&1```
 
 This way, regional information are read from the ```regions.json``` file, the requests are made to co2signal.com, and the data values are stored in the ```zones/``` directory as CSVs. Any error logs are stored in the ```co2scrap.log``` file. Storing data without using ```--regions-file``` option is not yet supported.
+
+## Notes
+
+Currently, co2signal.com sets a limit of 30 requests per-hour, regardless of what region you collect data for. When using the ```--regions-file``` option, having too many regions in the file may cause multiple API errors due to the rate limit. In these cases, you want to use the ```--sleep``` feature and properly time requests. It is also possible to acquire multiple co2signal.com tokens, and adding them into ```tokens.json```, in which case the CO2Scrap script will round-robin them.
 
 ## TODO
 - [ ] Support (lattitude, longitude) directly in JSON.
