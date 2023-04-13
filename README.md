@@ -86,7 +86,8 @@ This way, regional information are read from the ```regions.json``` file, the re
    usage: co2scrap [-h] [--auth-tokens AUTH_TOKENS] [--regions-file REGIONS]
                 [--output_dir OUTPUT_DIR]
                 [--country-zone COUNTRY [COUNTRY ...]] [--lon LONGITUDE]
-                [--lat LATITUDE] [--api_url API_URL] [--sleep SLEEP]```
+                [--lat LATITUDE] [--api_url API_URL] [--sleep SLEEP]
+   ```
 
 ## Notes
 
