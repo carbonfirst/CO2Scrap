@@ -73,7 +73,9 @@ An output instance:
 	}
 ]
  ```
- API and script error logs are output in the terminal and can be redirected directly to a file for further analysis. Use ```>>``` bash/zsh command when executing ```co2scrap.py```, e.g.,
+The import field is set in ```country_code```. Visit the [CO2signal website](https://api.electricitymap.org/v3/zones) to check all available zones as of today.
+
+API and script error logs are output in the terminal and can be redirected directly to a file for further analysis. Use ```>>``` bash/zsh command when executing ```co2scrap.py```, e.g.,
 
 ```python3 co2scrap.py --regions-file regions.json --output_dir zones/ >> co2scrap.log 2>&1```
 
@@ -93,8 +95,7 @@ This way, regional information are read from the ```regions.json``` file, the re
 
 Currently, co2signal.com sets a limit of 30 requests per-hour, regardless of what region you collect data for. When using the ```--regions-file``` option, having too many regions in the file may cause multiple API errors due to the rate limit. In these cases, you want to use the ```--sleep``` feature and properly time requests. It is also possible to acquire multiple co2signal.com tokens, and adding them into ```tokens.json```, in which case the CO2Scrap script will round-robin them.
 
-Visit the [CO2signal website](https://api.electricitymap.org/v3/zones) to check all available zones as of today.
-Their API is free for non-commercial use. Reach them out if you plan to commercialise it.
+co2signal.com API is free for non-commercial use. Reach them out if you plan to commercialise it.
 
 ## TODO
 - [ ] Support (lattitude, longitude) directly in a region's JSON file.
