@@ -61,7 +61,7 @@ An output instance:
 		"full_name": "Commonwealth of Massachusetts",
 		"code": "mass-1",
 		"public": false,
-		"country_code": "US-NE-ISNE",
+		"country_code": "US-NE-ISNE"
 	},
 	{
 		"provider": "iceland",
@@ -69,7 +69,7 @@ An output instance:
 		"full_name": "Iceland",
 		"code": "iceland-1",
 		"public": false,
-		"country_code": "IS",
+		"country_code": "IS"
 	}
 ]
  ```
