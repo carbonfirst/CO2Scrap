@@ -77,9 +77,7 @@ An output instance:
 
 ```python3 co2scrap.py --regions-file regions.json --output_dir zones/ >> co2scrap.log 2>&1```
 
-This way, regional information are read from the ```regions.json``` file, the requests are made to co2signal.com, and the data values are stored in the ```zones/``` directory as CSVs. Any error logs are stored in the ```co2scrap.log``` file. Storing data without using ```--regions-file``` option is not yet supported. We have written a simple [Cronjob configuration](co2scrap_regions.cron), so you can have cron to automatically calls the script at times.
-
-Visit the [CO2signal website](https://api.electricitymap.org/v3/zones) to check all available zones as of today.
+This way, regional information are read from the ```regions.json``` file, the requests are made to co2signal.com, and the data values are stored in the ```zones/``` directory as CSVs. Any error logs are stored in the ```co2scrap.log``` file. Storing data without using ```--regions-file``` option is not yet supported. We have written a simple [cronjob configuration](co2scrap_regions.cron), so you can have cron [automatically](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/) calls the script at times.
 
 * To see all other available options:
    ```bash
@@ -94,6 +92,8 @@ Visit the [CO2signal website](https://api.electricitymap.org/v3/zones) to check 
 ## Notes
 
 Currently, co2signal.com sets a limit of 30 requests per-hour, regardless of what region you collect data for. When using the ```--regions-file``` option, having too many regions in the file may cause multiple API errors due to the rate limit. In these cases, you want to use the ```--sleep``` feature and properly time requests. It is also possible to acquire multiple co2signal.com tokens, and adding them into ```tokens.json```, in which case the CO2Scrap script will round-robin them.
+
+Visit the [CO2signal website](https://api.electricitymap.org/v3/zones) to check all available zones as of today.
 
 ## TODO
 - [ ] Support (lattitude, longitude) directly in JSON.
