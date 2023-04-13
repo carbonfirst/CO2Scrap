@@ -72,6 +72,7 @@ An output instance:
 		"public": false,
 		"country_code": "IS",
 	}
+]
  ```
  API and script error logs are output in the terminal and can be redirected directly to a file for further analysis. Use ```>>``` bash/zsh command when executing ```co2scrap.py```, e.g.,
 
