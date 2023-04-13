@@ -29,10 +29,31 @@ Then, edit file ```tokens.json```, and include with the email address and API-ke
 ]
 ```
 
-The script will automatically read ```tokens.json``` to authenticate you with co2signal.com. Multiple tokens can be included in ```tokens.json```.
+The script automatically reads ```tokens.json``` to authenticate you with co2signal.com, but other file can be given by setting the ```--auth-tokens``` argument. Multiple tokens can be included in the tokens JSON file.
+
+Then, you can collect data for one country as:
+
+```python3 co2scrap.py --country-zone BR-CS```
+
+The output follows the order
+
+```timestamp,zone_datetime,status,zone_name,carbon_intensity_avg,carbon_intensity_unit,fossilFuelPercentage```
+
+Where:
+- timestamp: Local timestamp
+- zone_datetime: Region's (e.g., BR-CS) local time (in UTC)
+- status: Sample status. We currently only output "ok" values.
+- zone_name: Region's zone name.
+- carbon_intensity_avg: The average carbon intensity value in the region.
+- carbon_intensity_unit: The average carbon intensity's unit (in gCO2Eq/kWh).
+- fossilFuelPercentage: The fossil fuel percentage used to power the region.
+
+An output instance:
+
+```1633671339,2021-10-08T05:00:00.000Z,ok,BR-CS,243,gCO2eq/kWh,32.62```
 
 * To see all available options:
-   ```
+   ```bash
    python3 co2scrap.py --help
    ```
 
