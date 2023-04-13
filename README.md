@@ -5,11 +5,10 @@ CO2Scrap is a handy Python script to collect and output carbon intensity and fos
 * The script supports country, region-specific, and (latitude, longitude) scrapping from co2signal.com
   * If using multiple-regions, only region/country-specific support is implemented. See TODO.
 * Local's and Region's time are outputted, so the user can understand the differences across locations and time.
-* It handles errors that may happen when querying co2signal.com, so only validated data samples are stored.
-* It can also use multiple co2signal keys for multiplexing regions querying and avoid request limiting errors.
-  -  Edit ```tokens.json``` to use this feature.
-* Sleep feature to wait for a user-provided amount of seconds between requests.
+* It handles errors that may happen when querying co2signal.com, so only validated data samples are outputted.
+* The ```--sleep``` feature can be used to wait for any amount of seconds between requests to avoid rate limiting errors.
   -  This avoids saturating co2signal.com servers and having yourself blocked from querying (in case you do not own multiple API tokens).
+* It can also use multiple co2signal keys to multiplex tokens when gathering data for multiple regions at once.
  
  ## Requirements
  
