@@ -1,10 +1,10 @@
 # CO2Scrap
-CO2Scrap is a handy Python script to collect carbon intensity and fossil fuel usage from different regions around the world. Currently, it only supports scrapping data from electricityMap through co2signal.com free API.
+CO2Scrap is a handy Python script to collect and output carbon intensity and fossil fuel usage from different regions around the world. Currently, it only supports scrapping data from electricityMap through co2signal.com free API.
 
 ## Features
 * The script supports country, region-specific, and (latitude, longitude) scrapping from co2signal.com
   * If using multiple-regions, only region/country-specific support is implemented. See TODO.
-* Local's and Region's time are store, so the user can understand the differences across locations and time.
+* Local's and Region's time are outputted, so the user can understand the differences across locations and time.
 * It handles errors that may happen when querying co2signal.com, so only validated data samples are stored.
 * It can also use multiple co2signal keys for multiplexing regions querying and avoid request limiting errors.
   -  Edit ```tokens.json``` to use this feature.
@@ -33,7 +33,8 @@ API and script error logs are output in the terminal and can be redirected direc
 This way, regional information are read from the ```cloud_regions.full.json``` file, the energy values are stored in the ```zones/``` directory, and the error logs are stored in the ```co2scrap.log``` file.
 
 ## TODO
-- [ ] Support (lattitude, longitude) directly in JSON
-- [ ] Support other providers, e.g., [WattTime](https://www.watttime.org/api-documentation)
-- [ ] Improve documentation
-- [ ] Implement a notification feature that calls user-specified external script(s) every time new energy values are successufully retrieved 
+- [ ] Support (lattitude, longitude) directly in JSON.
+- [ ] Support other data providers, e.g., [WattTime](https://www.watttime.org/api-documentation).
+- [ ] Improve documentation.
+- [ ] Implement a feature to store collected value(s) in a CSV or JSON file.
+- [ ] Implement a notification feature that calls user-specified external script(s) every time new energy values are successufully retrieved.
