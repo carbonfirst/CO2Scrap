@@ -52,16 +52,16 @@ An output instance:
 
 ```1633671339,2021-10-08T05:00:00.000Z,ok,BR-CS,243,gCO2eq/kWh,32.62```
 
-* To see all available options:
-   ```bash
-   python3 co2scrap.py --help
-   ```
-
 API and script error logs are output in the terminal and can be redirected directly to a file for further analysis. Use ```>>``` bash/zsh command when executing ```co2scrap.py```, e.g.,
 
 ```python3 co2scrap.py --regions-file regions.json --output_dir zones/ >> co2scrap.log 2>&1```
 
 This way, regional information are read from the ```regions.json``` file, the requests are made to co2signal.com, and the data values are stored in the ```zones/``` directory as CSVs. Any error logs are stored in the ```co2scrap.log``` file. Storing data without using ```--regions-file``` option is not yet supported.
+
+* To see all available options:
+   ```bash
+   python3 co2scrap.py --help
+   ```
 
 ## Notes
 
