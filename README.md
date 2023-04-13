@@ -83,7 +83,7 @@ This way, regional information are read from the ```regions.json``` file, the re
    ```bash
    python3 co2scrap.py --help
    
-   usage: co2scrap [-h] [--auth-tokens AUTH_TOKENS] [--regions-file REGIONS]
+   usage: co2scrap.py [-h] [--auth-tokens AUTH_TOKENS] [--regions-file REGIONS]
                 [--output_dir OUTPUT_DIR]
                 [--country-zone COUNTRY [COUNTRY ...]] [--lon LONGITUDE]
                 [--lat LATITUDE] [--api_url API_URL] [--sleep SLEEP]
