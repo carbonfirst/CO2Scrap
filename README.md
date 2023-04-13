@@ -73,7 +73,7 @@ An output instance:
 	}
 ]
  ```
-The import field is set in ```country_code```. Visit the [CO2signal website](https://api.electricitymap.org/v3/zones) to check all available zones as of today.
+The import field is set in ```country_code```, where the exact place of interest -- or zone -- for data collection is set. Visit the [CO2signal website](https://api.electricitymap.org/v3/zones) to check all available zones as of today.
 
 API and script error logs are output in the terminal and can be redirected directly to a file for further analysis. Use ```>>``` bash/zsh command when executing ```co2scrap.py```, e.g.,
 
