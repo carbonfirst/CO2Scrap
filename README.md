@@ -40,13 +40,13 @@ The output follows the order
 ```timestamp,zone_datetime,status,zone_name,carbon_intensity_avg,carbon_intensity_unit,fossilFuelPercentage```
 
 Where:
-- timestamp: Local timestamp
-- zone_datetime: Region's (e.g., BR-CS) local time (in UTC)
-- status: Sample status. We currently only output "ok" values.
-- zone_name: Region's zone name.
-- carbon_intensity_avg: The average carbon intensity value in the region.
-- carbon_intensity_unit: The average carbon intensity's unit (in gCO2Eq/kWh).
-- fossilFuelPercentage: The fossil fuel percentage used to power the region.
+- *timestamp*: Local epoch timestamp
+- *zone_datetime*: Region's (e.g., BR-CS) local time (in UTC)
+- *status*: Sample status. We currently only output "ok" values.
+- *zone_name*: Region's zone name.
+- *carbon_intensity_avg*: The average carbon intensity value in the region.
+- *carbon_intensity_unit*: The average carbon intensity's unit (in gCO2Eq/kWh).
+- *fossilFuelPercentage*: The fossil fuel percentage used to power the region.
 
 An output instance:
 
