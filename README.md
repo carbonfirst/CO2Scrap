@@ -20,12 +20,14 @@ CO2Scrap is a handy Python script to collect and output carbon intensity and fos
 Visit https://co2signal.com, and sign up to acquire an API key.
 Then, edit file ```tokens.json```, and include with the email address and API-key you have received. E.g.:
 
+```json
 [
         {
                 "user": "username@email.com",
                 "token": "Include-Your-Own-Token"
         }
 ]
+```
 
 The script will automatically read ```tokens.json``` to authenticate you with co2signal.com. Multiple tokens can be included in ```tokens.json```.
 
