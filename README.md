@@ -94,6 +94,7 @@ This way, regional information are read from the ```regions.json``` file, the re
 Currently, co2signal.com sets a limit of 30 requests per-hour, regardless of what region you collect data for. When using the ```--regions-file``` option, having too many regions in the file may cause multiple API errors due to the rate limit. In these cases, you want to use the ```--sleep``` feature and properly time requests. It is also possible to acquire multiple co2signal.com tokens, and adding them into ```tokens.json```, in which case the CO2Scrap script will round-robin them.
 
 Visit the [CO2signal website](https://api.electricitymap.org/v3/zones) to check all available zones as of today.
+Their API is free for non-commercial use. Reach them out if you plan to commercialise it.
 
 ## TODO
 - [ ] Support (lattitude, longitude) directly in a region's JSON file.
