@@ -77,7 +77,9 @@ An output instance:
 
 ```python3 co2scrap.py --regions-file regions.json --output_dir zones/ >> co2scrap.log 2>&1```
 
-This way, regional information are read from the ```regions.json``` file, the requests are made to co2signal.com, and the data values are stored in the ```zones/``` directory as CSVs. Any error logs are stored in the ```co2scrap.log``` file. Storing data without using ```--regions-file``` option is not yet supported. Visit the [CO2signal website](https://api.electricitymap.org/v3/zones) to check all available zones as of today.
+This way, regional information are read from the ```regions.json``` file, the requests are made to co2signal.com, and the data values are stored in the ```zones/``` directory as CSVs. Any error logs are stored in the ```co2scrap.log``` file. Storing data without using ```--regions-file``` option is not yet supported. We have written a simple [Cronjob configuration](co2scrap_regions.cron), so you can have cron to automatically calls the script at times.
+
+Visit the [CO2signal website](https://api.electricitymap.org/v3/zones) to check all available zones as of today.
 
 * To see all other available options:
    ```bash
