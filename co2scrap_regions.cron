@@ -1,0 +1,1 @@
+0,30 * * * * python3 $HOME/co2scrap/co2scrap.py --regions-file $HOME/co2scrap/regions.json --output_dir $HOME/co2scrap/zones/ >> $HOME/co2scrap/co2scrap.log 2>&1
