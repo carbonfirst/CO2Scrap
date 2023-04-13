@@ -28,13 +28,12 @@ Then, edit the file ```tokens.json``` with the email address and API-key you hav
 
 API and script error logs are output in the terminal and can be redirected directly to a file for further analysis. Use ```>>``` bash/zsh command when executing ```co2scrap.py```, e.g.,
 
-```python3 co2scrap.py --regions-file cloud_regions.full.json --output_dir zones/ >> co2scrap.log 2>&1```
+```python3 co2scrap.py --regions-file regions.json --output_dir zones/ >> co2scrap.log 2>&1```
 
-This way, regional information are read from the ```cloud_regions.full.json``` file, the energy values are stored in the ```zones/``` directory, and the error logs are stored in the ```co2scrap.log``` file.
+This way, regional information are read from the ```regions.json``` file, the requests are made to co2signal.com, and the data values are stored in the ```zones/``` directory as CSVs. Any error logs are stored in the ```co2scrap.log``` file. Storing data without using ```--regions-file``` option is not yet supported.
 
 ## TODO
 - [ ] Support (lattitude, longitude) directly in JSON.
 - [ ] Support other data providers, e.g., [WattTime](https://www.watttime.org/api-documentation).
 - [ ] Improve documentation.
-- [ ] Implement a feature to store collected value(s) in a CSV or JSON file.
 - [ ] Implement a notification feature that calls user-specified external script(s) every time new energy values are successufully retrieved.
