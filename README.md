@@ -97,7 +97,6 @@ Currently, co2signal.com sets a limit of 30 requests per-hour, regardless of wha
 Visit the [CO2signal website](https://api.electricitymap.org/v3/zones) to check all available zones as of today.
 
 ## TODO
-- [ ] Support (lattitude, longitude) directly in JSON.
-- [ ] Support other data providers, e.g., [WattTime](https://www.watttime.org/api-documentation).
-- [ ] Improve documentation.
+- [ ] Support (lattitude, longitude) directly in a region's JSON file.
 - [ ] Implement a notification feature that calls user-specified external script(s) every time new energy values are successufully retrieved.
+- [ ] Support other data providers, e.g., [WattTime](https://www.watttime.org/api-documentation) or Singularity.
