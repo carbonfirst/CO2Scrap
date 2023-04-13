@@ -185,9 +185,10 @@ def parse_tokens(tokens_file):
             zones[region['country_code']] = None
 
 def serve():
-    parser = argparse.ArgumentParser(__name__)
+    cur_dir = os.path.dirname(os.path.realpath(__file__))
+    parser = argparse.ArgumentParser("co2scrap.py")
     parser.add_argument("--auth-tokens", dest="auth_tokens", type=str, default='tokens.json', help="File with list of Authorization tokens (from co2signal.com), one token per-line")
-    parser.add_argument("--regions-file", dest="regions", default=os.path.dirname(os.path.realpath(__file__)) + "/cloud_regions.json", type=str,
+    parser.add_argument("--regions-file", dest="regions", default=cur_dir + "/cloud_regions.json", type=str,
                         help="Input JSON file with set of Regions and their country zone codes to collect Carbon Intensity from")
     parser.add_argument('--output_dir', required='--regions-file' in sys.argv, #only required if --regions-file is set
                         help="Directory to store Carbon Intensity collected for each Region (in --regions-file)")
